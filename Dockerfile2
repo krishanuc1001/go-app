@@ -24,7 +24,7 @@ FROM alpine:latest AS run
 WORKDIR /srcrun
 
 # Copies the app binary from the first stage to the working directory in the second stage.
-COPY --from=build /srcbuild /srcrun
+COPY --from=build /srcbuild/app /srcrun
 
 #Exposes port 8080 in the container, so that it can be accessed from outside the container.
 EXPOSE 8080
